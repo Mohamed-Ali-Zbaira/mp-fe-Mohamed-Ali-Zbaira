@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+  <h2 class="mb-2 py-4">Liste des clients</h2>
+  <div class="search-hero mb-3">
+    <input
+      type="text"
+      name="search"
+      [(ngModel)]="searchText"
+      (ngModelChange)="filterClients()"
+      placeholder="Search by name OR adresse "
+    />
+  </div>
+
+  <table class="table align-middle bg-white">
+  <thead class="bg-light">
+    <tr>
+      <th>Image</th>
+      <th>
+        <button
+          type="button"
+          class="btn btn-link"
+          (click)="sortClientsByName()"
+        >
+          Nom
+        </button>
+      </th>
+      <th>
+        <button
+          type="button"
+          class="btn btn-link"
+          (click)="sortClientsByLastName()"
+        >
+          Prénom
+        </button>
+      </th>
+      <th>
+        <button
+          type="button"
+          class="btn btn-link"
+          (click)="sortClientsByAdresse()"
+        >
+          Adresse
+        </button>
+      </th>
+      <th>
+        <button
+          type="button"
+          class="btn btn-link"
+          (click)="sortClientsByDate()"
+        >
+          Date d'Inscription
+        </button>
+      </th>
+      <th>
+        Numéro Télephone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>
+        <div class="d-flex align-items-center">
+          <img
+            src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg"
+            class="rounded-circle"
+            alt=""
+            style="width: 45px; height: 45px"
+          />
+        </div>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link">
+          <p class="fw-normal mb-1">{{ client.name }}</p>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link">
+
+        <p class="fw-normal mb-1">{{ client.lastname }}</p></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link">
+
+        <span class="badge badge-warning rounded-pill d-inline">{{
+          client.adresse
+        }}</span>
+        </button>
+      </td>
+      <td>        <button type="button" class="btn btn-link">
+
+        {{ client.dateInscription }}</button></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-link btn-rounded btn-sm fw-bold"
+          data-mdb-ripple-color="dark"
+        >
+          {{ client.numero }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

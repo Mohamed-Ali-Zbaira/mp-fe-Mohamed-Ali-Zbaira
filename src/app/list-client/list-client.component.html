@@ -1,0 +1,25 @@
+<!-- list-client.component.html -->
+<app-navbar></app-navbar>
+
+<br>
+<div class="card-header container">
+ <h2 class="mb-4">Liste des clients ayant le plus grand nombre de factures</h2>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div *ngFor="let client of clients" class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Client ID: {{ client.id }}</h5>
+            <p class="card-text">Name: {{ client.name }}</p>
+            <p class="card-text">Lastname: {{ client.lastname }}</p>
+            <p class="card-text">Numero: {{ client.numero }}</p>
+            <p class="card-text">Adresse: {{ client.adresse }}</p>
+            <p class="card-text">Date Inscription: {{ client.dateInscription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

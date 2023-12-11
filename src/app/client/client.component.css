@@ -1,0 +1,29 @@
+.btn-link {
+    color: black !important;
+  }
+  /* Ajouter ces styles dans votre fichier CSS ou dans la balise style du composant Angular */
+
+.search-hero {
+    position: relative;
+  }
+  
+  .search-hero input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f8f9fa; /* Couleur de fond */
+    color: #495057; /* Couleur du texte */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .search-hero input[type="text"]:focus {
+    background-color: #fff; /* Couleur de fond lorsqu'il est en focus */
+    color: #495057; /* Couleur du texte lorsqu'il est en focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre légère lorsqu'il est en focus */
+  }
+  
+  /* Vous pouvez ajouter d'autres styles en fonction de vos préférences */
+  

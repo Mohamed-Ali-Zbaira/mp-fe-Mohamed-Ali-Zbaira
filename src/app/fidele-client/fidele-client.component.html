@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<br><br><br><br>
+<div class=" d-flex align-items-center justify-content-center "><h1 class="text-danger">This client loyal.</h1>
+</div>
+
+<div class="container d-flex align-items-center justify-content-center vh-80">
+    <div *ngIf="clientData" class="card flex-md-row mb-4 box-shadow h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-success">ID: {{ clientData.id }}</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">
+            {{ clientData.name }} {{ clientData.lastname }}
+          </a>
+        </h3>
+        <div class="mb-1 text-muted">{{ clientData.dateInscription | date }}</div>
+        <p class="card-text mb-auto">
+          Numero: {{ clientData.numero }}<br>
+          Adresse: {{ clientData.adresse }}
+        </p>
+        <!-- Use an ngIf directive to conditionally show the icon -->
+        <ng-container >
+          <i class="fas fa-trophy text-warning"></i> <!-- FontAwesome trophy icon for loyal clients -->
+        </ng-container>
+        <ng-template #nonLoyalIcon>
+          <p class="text-danger">This client is not loyal.</p>
+        </ng-template>
+      </div>
+      <!-- Use an ngIf directive to conditionally show the image -->
+      <img
+        class="card-img-right flex-auto d-none d-md-block"
+        data-src="holder.js/200x250?theme=thumb"
+        alt="Thumbnail [200x250]"
+        src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg"
+        data-holder-rendered="true"
+        style="width: 200px; height: 250px;"
+      />
+    </div>
+  </div>
+  

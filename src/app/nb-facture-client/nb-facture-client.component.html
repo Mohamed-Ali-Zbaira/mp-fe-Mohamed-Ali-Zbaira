@@ -1,0 +1,40 @@
+
+<app-navbar></app-navbar>
+
+<div class="container py-4">
+    <h2 class="mb-4">Nombre de Facture pour Chaque client</h2>
+    <div class="search-hero">
+      <input
+        type="text"
+        name="search"
+        [(ngModel)]="searchText"
+        (ngModelChange)="filterClients()"
+        placeholder="Search by name"
+      />
+    </div>
+    <br>
+    <table class="table table-bordered table-striped table-rounded">
+      <thead class="thead-dark">
+        <tr>
+          <!-- Your table headers go here -->
+
+          <th>          <button
+          type="button"
+          class="btn btn-link"
+          (click)="sortClientsByName()"
+        >
+        Client Name
+        </button></th>
+          <th>Nombre de Facture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="invoiceCounts">
+          <tr *ngFor="let item of invoiceCounts">
+            <td>{{ item.name }}</td>
+            <td>{{ item.count }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  

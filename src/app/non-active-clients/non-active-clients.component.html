@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+
+      <table class="table table-bordered table-sm" style="width: 100%">
+        <thead>
+          <tr>
+            <th
+              class="text-center"
+              style="color: rgb(16, 1, 67); font-weight: bold"
+            >
+              Listes Clients Actives
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of activeClients">
+            <td class="d-flex align-items-center">
+              <div class="col-6">
+                <b style="color: rgb(16, 1, 67); margin-bottom: 0">{{
+                  client.name
+                }}</b>
+              </div>
+              <div class="col-6">
+                {{ client.lastname }}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-6">
+
+      <table class="table table-bordered table-sm" style="width: 100%">
+        <thead>
+          <tr>
+            <th
+              class="text-center"
+              style="color: rgb(16, 1, 67); font-weight: bold"
+            >
+              Listes Clients Non Actives
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of nonActiveClients">
+            <td class="d-flex align-items-center">
+              <div class="col-6">
+                <b style="color: rgb(16, 1, 67); margin-bottom: 0">{{
+                  client.name
+                }}</b>
+              </div>
+              <div class="col-6">
+                {{ client.lastname }}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<app-nonactive></app-nonactive>

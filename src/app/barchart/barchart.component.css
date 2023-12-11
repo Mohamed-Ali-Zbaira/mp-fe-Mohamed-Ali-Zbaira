@@ -1,0 +1,11 @@
+/* barchart.component.css */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 580px; /* Ajustez la hauteur selon vos besoins */
+    margin: 20px; /* Ajoutez une marge pour l'espace autour du graphique */
+    border: 1px solid #e0e0e0; /* Ajoutez une bordure pour un aspect professionnel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre pour un aspect professionnel */
+}

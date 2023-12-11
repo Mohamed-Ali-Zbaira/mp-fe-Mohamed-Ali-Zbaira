@@ -1,0 +1,3 @@
+[submodule "back-gestion-client-facture"]
+	path = back-gestion-client-facture
+	url = https://github.com/A-Hamdi1/back-gestion-client-facture.git

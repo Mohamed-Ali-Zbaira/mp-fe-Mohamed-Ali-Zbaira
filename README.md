@@ -1,27 +1,76 @@
-# Myaplication
+## ClientController Methods
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+### 1. Get Most Loyal Client
+- **Endpoint:** `/api/clients/most-loyal`
+- **Description:** Retrieves the most loyal client.
+- **HTTP Method:** GET
+- **Response:** Returns the most loyal client or a 404 if none found.
 
-## Development server
+### 2. Get Non-Active Clients
+- **Endpoint:** `/api/clients/non-active-clients`
+- **Description:** Retrieves a list of non-active clients.
+- **HTTP Method:** GET
+- **Response:** Returns the list of non-active clients.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 3. Get Active Clients
+- **Endpoint:** `/api/clients/active-clients`
+- **Description:** Retrieves a list of active clients.
+- **HTTP Method:** GET
+- **Response:** Returns the list of active clients or a 404 if none found.
 
-## Code scaffolding
+### 4. Get All Clients
+- **Endpoint:** `/api/clients/all`
+- **Description:** Retrieves a list of all clients.
+- **HTTP Method:** GET
+- **Response:** Returns the list of all clients.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 5. Get Clients by Number of Invoices
+- **Endpoint:** `/api/clients/by-nb-factures`
+- **Description:** Retrieves clients sorted by the number of invoices.
+- **HTTP Method:** GET
+- **Response:** Returns the list of clients sorted by the number of invoices.
 
-## Build
+### 6. Get Client Counts by Address
+- **Endpoint:** `/api/clients/client-counts-by-address`
+- **Description:** Retrieves a map of client counts grouped by address.
+- **HTTP Method:** GET
+- **Response:** Returns the map of client counts by address.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 7. Get Invoice Counts by Client (Ordered Descending)
+- **Endpoint:** `/api/clients/invoice-counts-ordered-descending`
+- **Description:** Retrieves a map of invoice counts by client, ordered in descending order.
+- **HTTP Method:** GET
+- **Response:** Returns the map of invoice counts ordered in descending order.
 
-## Running unit tests
+### 8. Get Count of Active Clients
+- **Endpoint:** `/api/clients/active-clients-count`
+- **Description:** Retrieves the count of active clients.
+- **HTTP Method:** GET
+- **Response:** Returns the count of active clients.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 9. Get Count of Non-Active Clients
+- **Endpoint:** `/api/clients/non-active-clients-count`
+- **Description:** Retrieves the count of non-active clients.
+- **HTTP Method:** GET
+- **Response:** Returns the count of non-active clients.
 
-## Running end-to-end tests
+### 10. Get Count of All Clients
+- **Endpoint:** `/api/clients/all-client-count`
+- **Description:** Retrieves the count of all clients.
+- **HTTP Method:** GET
+- **Response:** Returns the count of all clients.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Note: Angular Sorting and Searching
+For client-side sorting and searching, implement the following methods in your Angular application:
 
-## Further help
+#### Sort Clients by Name
+- **Method:** Angular Sorting Implementation
+- **Description:** Implement sorting functionality for clients by name on the Angular side.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Sort Clients by Address
+- **Method:** Angular Sorting Implementation
+- **Description:** Implement sorting functionality for clients by address on the Angular side.
+
+#### Search Clients by Name
+- **Method:** Angular Searching Implementation
+- **Description:** Implement searching functionality for clients by name on the Angular side.
